@@ -1,0 +1,87 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Pizza Inn</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Design your own pizza now!</h1>
+
+            <p>Now you can create refreshing, mouthwatering pizza!</p>
+        </div>
+
+        <form wicket:id="form">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><b>1. Choose Size</b></div>
+                        <div class="panel-body">
+                            <ul wicket:id="sizeRadioGroup">
+                                <li wicket:id="sizeListView">
+                                    <label class="radio">
+                                        <input type="radio" wicket:id="sizeOption">
+                                        <span wicket:id="sizeName">Regular (serves 1)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><b>2. Choose Toppings</b></div>
+                        <div class="panel-body">
+                            <ul wicket:id="toppingGroup">
+                                <li wicket:id="toppingListView">
+                                    <label class="checkbox">
+                                        <input type="checkbox" wicket:id="toppingOption">
+                                        <span wicket:id="name">Extra Cheese</span>
+                                        <span wicket:id="price">£2.00</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Quantity</label>
+
+                            <div class="col-sm-4">
+                                <select class="form-control" wicket:id="quantityDropDown"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <h1>
+                                <span class="label label-success">You pay: <span
+                                        wicket:id="totalPrice">£20.00</span></span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</wicket:extend>
